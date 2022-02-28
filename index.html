@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Kieferorthopäde</title>
+</head>
+
+<body>
+  <div class="page" id="page">
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item" tabindex="1">
+          <a href="#" class="fa-solid fa-user"></a>
+        </li>
+        <li class="navigation__item navigation__item--active" id="icon_bg" tabindex="2">
+          <a href="#" class="fa-solid fa-comment" onclick="toggle_patient()" id="comment"></a>
+        </li>
+        <li class="navigation__item">
+          <a href="#"class="fa-solid fa-circle-info" tabindex="3"></a>
+        </li>
+        <li class="navigation__item navigation__item--separator" tabindex="4">
+          <a href="#"class="fa-solid fa-house-medical"></a>
+        </li>
+        <li class="navigation__item" tabindex="5">
+          <a href="#"class="fa-solid fa-gear"></a>
+        </li>
+      </ul>
+
+      <img class="powered-by" src="./images/dr_clip.png" alt="">
+
+    </nav>
+    <div class="patient" id="patient">
+      <div class="patient__logo-container">
+        <img class="patient__logo" src="./images/logo.png" alt="Logo" id="patient_logo">
+      </div>
+      <div class="patient__content">
+        <h1 class="patient__headline">
+          Patientenberatung
+        </h1>
+        <div>
+          <div class="patient__item--separator">
+            <ul class="patient__record">
+              <li class="record__item">
+                <h3 class="record__headline"> Beratungsdetails </h3>
+                <a href="#"> Herold, Alfred </a>
+              </li>
+              <li class="record__item">
+                <h3 class="record__headline"> Patienten Grafik </h3>
+                <a href="#"> Röntgenbild 14.05.1890 </a>
+              </li>
+              <li class="record__item">
+                <h3 class="record__headline record__item--separator"> Patienten Grafik </h3>
+                <p class="record__add">+</p>
+                <a href="#"> Grafik hinzufügen </a>
+              </li>
+            </ul>
+          </div>
+          <div class="patient__item--separator">
+            <div class="patient__add-findings patient__record">
+                <li class="record__item record__item--highlight">
+                  <h3 class="record__headline"> Befund </h3>
+                  <p class="record__add">+</p>
+                  <a href="#"> Befund hinzufügen </a>
+                </li>
+            </div>
+          </div>
+        </div>
+          <button class="button--save">
+            Speichern & Schließen
+          </button>
+          <button class="button--mail">
+            Per Mail senden
+          </button>
+      </div>
+    </div>
+
+    <main class="main">
+      <header class="main__header">
+        <div class="modus">
+          <h2>Vorbereitungsmodus</h2>
+          <div class="modus__current">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            <p>Aufklärungsmodus</p>
+          </div>
+        </div>
+        <h4>Es werden keine Daten getrackt</h4>
+      </header>
+
+      <div class="main__content">
+        <section class="findings">
+          <h1 class="findings__headline">Befund wählen</h1>
+          <select class="playlist-select">
+            <option value="">Playlist 1</option>
+            <option value="">Playlist 2</option>
+          </select>
+
+          <div class="playlist-area" id="playlist-area">
+            <div class="playlist">
+              <h1 class="playlist__headline">Playlist 1</h1>
+              <div class="playlist__content">
+                <h3 class="playlist__item-title">Befund</h3>
+                <p class="playlist__item-text">
+                  <strong>Kreuzbiss im Seitenzahnbereich</strong>
+                  Oberkiefer links, 3. Zahn hinten
+                </p>
+              </div>
+              <div class="playlist__content">
+                <h3 class="playlist__item-title">Therapie</h3>
+                <p class="playlist__item-text">Expansion des Kiefers durch Gaumennaht-erweiterung</p>
+                <p class="playlist__item-text">Alternative Therapie</p>
+              </div>
+              <div class="playlist__content">
+                <h3 class="playlist__item-title">Methode</h3>
+                <p class="playlist__item-text">Methode H1</p>
+              </div>
+
+              <button class="playlist__button">Auswählen</button>
+
+            </div>
+
+
+            <div class="playlist">
+              <h1 class="playlist__headline">Playlist 2</h1>
+              <div class="playlist__content">
+                <h3 class="playlist__item-title">Befund</h3>
+                <p class="playlist__item-text">
+                  <strong>Kreuzbiss im Seitenzahnbereich</strong>
+                  Oberkiefer rechts
+                </p>
+              </div>
+              <div class="playlist__content">
+                <h3 class="playlist__item-title">Therapie</h3>
+                <p class="playlist__item-text">Expansion des Kiefers durch Gaumennaht-erweiterung</p>
+                <p class="playlist__item-text">Alternative Therapie</p>
+              </div>
+              <div class="playlist__content">
+                <h3 class="playlist__item-title">Methode</h3>
+                <p class="playlist__item-text">Methode H1</p>
+              </div>
+
+              <button class="playlist__button">Auswählen</button>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="findings-selection">
+          <h1 class="selection__headline">Auswahl des Befundes</h1>
+          <input type="search" class="search-findings" placeholder="Befund suchen">
+          <div class="selection__buttons">
+            <div class="filter-treatment-type">
+              <p>Filtern nach</p>
+              <button class="treatment-type">Orthodontie</button>
+              <button class="treatment-type treatment-type--highlighted">KFO</button>
+              <button class="treatment-type">Chirurgie</button>
+              <button class="treatment-type">Dentofoziale Orthopädie</button>
+            </div>
+            <div class="selection__tags">
+              <button class="findings-tag">Platzmangel</button>
+              <button class="findings-tag">Platzüberschuss</button>
+              <button class="findings-tag"> KI. II</button>
+              <button class="findings-tag">KI. III</button>
+              <button class="findings-tag">Tiefgebiss</button>
+              <button class="findings-tag findings-tag--highlighted">Kreuzbiss</button>
+              <button class="findings-tag">Durchbruchsstörung</button>
+              <button class="findings-tag">Bukkalokklusion</button>
+              <button class="findings-tag">Offener Biss</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="treatment-selection">
+
+          <div class="treatment">
+            <div class="treatment__image-box">
+              <img class="teeth-img" src="./images/teeth.jpeg" alt="Bild">
+              <div class="middle-icon"></div>
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4 class="treatment__description">
+              Expansion des Kiefers durch die Gaumennaht-erweiterung
+            </h4>
+            <p class="treatment__detail">
+              Oberkiefer links, 3. Zahn hinten
+            </p>
+            <button class="treatment__button">Auswählen</button>
+          </div>
+
+          <div class="treatment">
+            <div class="treatment__image-box">
+              <img class="teeth-img" src="./images/teeth.jpeg" alt="Bild">
+              <div class="middle-icon"></div>
+              <i class="fa-solid fa-play"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4 class="treatment__description">
+              Expansion des Kiefers durch die Gaumennaht-erweiterung
+            </h4>
+            <p class="treatment__detail">
+              Oberkiefer links, 3. Zahn hinten
+            </p>
+            <button class="treatment__button">Auswählen</button>
+          </div>
+
+          <div class="treatment">
+            <div class="treatment__image-box">
+              <img class="teeth-img" src="./images/teeth.jpeg" alt="Bild">
+              <div class="middle-icon"></div>
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h4 class="treatment__description">
+              Expansion des Kiefers durch die Gaumennaht-erweiterung
+            </h4>
+            <p class="treatment__detail">
+              Oberkiefer links, 3. Zahn hinten
+            </p>
+            <button class="treatment__button">Auswählen</button>
+          </div>
+
+          <div class="treatment">
+            <div class="treatment__image-box">
+              <img class="teeth-img" src="./images/teeth.jpeg" alt="Bild">
+              <div class="middle-icon"></div>
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 class="treatment__description">
+              Expansion des Kiefers durch die Gaumennaht-erweiterung
+            </h4>
+            <p class="treatment__detail">
+              Oberkiefer links, 3. Zahn hinten
+            </p>
+            <button class="treatment__button">Auswählen</button>
+          </div>
+
+          <div class="treatment">
+            <div class="treatment__image-box">
+              <img class="teeth-img" src="./images/teeth.jpeg" alt="Bild">
+              <div class="middle-icon"></div>
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h4 class="treatment__description">
+              Expansion des Kiefers durch die Gaumennaht-erweiterung
+            </h4>
+            <p class="treatment__detail">
+              Oberkiefer links, 3. Zahn hinten
+            </p>
+            <button class="treatment__button">Auswählen</button>
+          </div>
+
+          <div class="treatment">
+            <div class="treatment__image-box">
+              <img class="teeth-img" src="./images/teeth.jpeg" alt="Bild">
+              <div class="middle-icon"></div>
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 class="treatment__description">
+              Expansion des Kiefers durch die Gaumennaht-erweiterung
+            </h4>
+            <p class="treatment__detail">
+              Oberkiefer links, 3. Zahn hinten
+            </p>
+            <button class="treatment__button">Auswählen</button>
+          </div>
+
+        </section>
+
+
+
+
+
+
+
+      </div>
+      <footer class="footer">
+        <a href="#">Kontakt</a>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">FAQ</a>
+      </footer>
+
+    </main>
+
+
+
+
+
+  </div>
+  <script src="https://kit.fontawesome.com/aab8c67944.js" crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
+</body>
